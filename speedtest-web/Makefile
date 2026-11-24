@@ -38,7 +38,7 @@ config SPEEDTEST_WEB_COMPRESS_GOPROXY
 
 config SPEEDTEST_WEB_COMPRESS_UPX
 	bool "Compress executable files with UPX"
-	default y
+	default n
 endef
 
 ifeq ($(CONFIG_SPEEDTEST_WEB_COMPRESS_GOPROXY),y)
