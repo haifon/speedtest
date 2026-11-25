@@ -6,12 +6,12 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=speedtest-web
 PKG_VERSION:=1.1.5
-PKG_RELEASE:=$(AUTORELESE)
+PKG_RELEASE:=$(PKG_SOURCE_VERSION)
 
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_URL:=https://github.com/ZeaKyX/speedtest-go.git
+PKG_SOURCE_URL:=https://github.com/librespeed/speedtest-go.git
 PKG_SOURCE_VERSION:=d8ccc31d3ae0ed2833691e3b8fc6fd1795d1ec13
-PKG_MIRROR_HASH:=63dad14ce21c78b37f223aacc4fd4611bbe1f9619afff8d52a38186441cb6a86
+#PKG_MIRROR_HASH:=63dad14ce21c78b37f223aacc4fd4611bbe1f9619afff8d52a38186441cb6a86
 
 PKG_LICENSE:=LGPL-3.0
 PKG_LICENSE_FILES:=LICENSE
@@ -38,7 +38,7 @@ config SPEEDTEST_WEB_COMPRESS_GOPROXY
 
 config SPEEDTEST_WEB_COMPRESS_UPX
 	bool "Compress executable files with UPX"
-	default y
+	default n
 endef
 
 ifeq ($(CONFIG_SPEEDTEST_WEB_COMPRESS_GOPROXY),y)
